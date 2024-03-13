@@ -14,6 +14,7 @@ h1 {
 .city-images {
     display: flex;
     justify-content: space-around;
+    align-items: center; /* Center items vertically */
     margin-top: 50px;
 }
 
@@ -29,6 +30,7 @@ h1 {
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 50px;
+    text-align: center; /* Center text horizontally */
 }
 
 .city-info img {
