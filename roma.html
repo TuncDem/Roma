@@ -20,9 +20,14 @@
     </div>
 
     <script>
+        var audio = new Audio('audio/sanmarco.mp3'); // Adjust the path to your audio file
+
         function playAudio() {
-            var audio = new Audio('img/sanmarco.mp3'); // Adjust the path to your audio file
             audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
         }
     </script>
 </body>
