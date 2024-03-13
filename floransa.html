@@ -9,25 +9,26 @@
 <body>
     <h1>Floransa</h1>
     <div class="city-info">
-        <img src="img/floransa.jpg" alt="San Marco Meydanı">
+        <img src="img/sanmarcomeydani.jpg" alt="San Marco Meydanı">
         <h2>San Marco Meydanı</h2>
         <p>About San Marco Meydanı is beautiful etc etc.</p>
-        <div class="audio-controls">
-            <button onclick="playAudio()">Play</button>
-            <button onclick="pauseAudio()">Pause</button>
-        </div>
+        <button id="playButton" onclick="toggleAudio()">Play</button>
         <!-- Add more information about the city -->
     </div>
 
     <script>
         var audio = new Audio('audio/sanmarco.mp3'); // Adjust the path to your audio file
+        var isPlaying = false;
 
-        function playAudio() {
-            audio.play();
-        }
-
-        function pauseAudio() {
-            audio.pause();
+        function toggleAudio() {
+            if (isPlaying) {
+                audio.pause();
+                document.getElementById('playButton').innerText = 'Play';
+            } else {
+                audio.play();
+                document.getElementById('playButton').innerText = 'Pause';
+            }
+            isPlaying = !isPlaying;
         }
     </script>
 </body>
